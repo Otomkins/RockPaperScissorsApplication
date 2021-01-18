@@ -151,13 +151,13 @@
         <!-- Player 2 Choice -->
         <Label x:Name="Player_2_Choice_Label" Content="Player 2 Chooses:" HorizontalAlignment="Left" Height="47" Margin="218,39,0,0" Grid.Row="1" VerticalAlignment="Top" Width="216" ClipToBounds="True" FontSize="24" FontWeight="Bold" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1"/>
         <Border x:Name="Player_2_Choice_Border" BorderThickness="4,4,4,4" BorderBrush="Black" HorizontalAlignment="Left" Height="226" Margin="25,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="409" Grid.Column="1"/>
-        <Image x:Name="Player_2_Choice_Image" HorizontalAlignment="Left" Height="226" Margin="25,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="406" Grid.Column="1"/>
+        <Image x:Name="Player_2_Choice_Image" HorizontalAlignment="Left" Height="226" Margin="47,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="406" Grid.Column="1"/>
 
 
 
         <TextBox x:Name="Round_Log_TextBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="58" Margin="265,334,0,0" Grid.Row="1" Text="Make Your Selection...." TextWrapping="Wrap" VerticalAlignment="Top" Width="870" FontSize="36" TextAlignment="Center" FontFamily="Calibri" FontWeight="Bold" BorderThickness="2,2,2,2" BorderBrush="Black" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionBrush="Black"/>
 
-        <Button x:Name="Game_Restart_Button"  Content="Restart" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="49" Margin="568,415,0,0" Grid.Row="1" VerticalAlignment="Top" Width="264" BorderThickness="2,2,2,2" FontWeight="Normal" FontSize="24"/>
+        <Button x:Name="Game_Restart_Button"  Content="Restart" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="49" Margin="568,415,0,0" Grid.Row="1" VerticalAlignment="Top" Width="264" BorderThickness="2,2,2,2" FontWeight="Normal" FontSize="24" Click="Game_Restart_Button_Click"/>
 
 
 
