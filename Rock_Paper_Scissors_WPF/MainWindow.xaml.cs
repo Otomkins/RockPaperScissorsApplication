@@ -24,5 +24,24 @@ namespace Rock_Paper_Scissors_WPF
         {
             InitializeComponent();
         }
+
+        BitmapImage _player1RockImage = new BitmapImage(new Uri("/Images/Player_1_Rock.png", UriKind.Relative));
+        BitmapImage _player1PaperImage = new BitmapImage(new Uri("/Images/Player_1_Paper.png", UriKind.Relative));
+        BitmapImage _player1ScissorsImage = new BitmapImage(new Uri("/Images/Player_1_Scissors.png", UriKind.Relative));
+
+        private void Player_1_Selection_Rock_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Player_1_Choice_Image.Source = _player1RockImage;
+        }
+
+        private void Player_1_Selection_Paper_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Player_1_Choice_Image.Source = _player1PaperImage;
+        }
+
+        private void Player_1_Selection_Scissors_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Player_1_Choice_Image.Source = _player1ScissorsImage;
+        }
     }
 }

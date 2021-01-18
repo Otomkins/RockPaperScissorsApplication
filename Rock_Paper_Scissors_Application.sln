@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rock_Paper_Scissors_Code", "Rock_Paper_Scissors_Code\Rock_Paper_Scissors_Code.csproj", "{16ED07FE-3BF2-44C9-8434-3645D0419DB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rock_Paper_Scissors_WPF", "Rock_Paper_Scissors_WPF\Rock_Paper_Scissors_WPF.csproj", "{7E78B264-F9B0-4338-83D1-E328F2103F9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rock_Paper_Scissors_WPF", "Rock_Paper_Scissors_WPF\Rock_Paper_Scissors_WPF.csproj", "{7E78B264-F9B0-4338-83D1-E328F2103F9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rock_Paper_Scissors_Tests", "Rock_Paper_Scissors_Tests\Rock_Paper_Scissors_Tests.csproj", "{C5A39479-8A05-4D32-81D8-650534471F86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rock_Paper_Scissors_Tests", "Rock_Paper_Scissors_Tests\Rock_Paper_Scissors_Tests.csproj", "{C5A39479-8A05-4D32-81D8-650534471F86}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

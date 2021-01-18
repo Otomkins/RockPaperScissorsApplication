@@ -12,12 +12,23 @@ namespace Rock_Paper_Scissors_Code
         public string player1Choice;
         public string player2Choice;
 
-        public string[] choices = new string[3]
+        public string[] choices = new string[6]
         {
+            "Rock",
+            "Paper",
+            "Scissors",
             "Rock",
             "Paper",
             "Scissors"
         };
+
+        public void SetPlayerChoice(int playerChoice)
+        {
+            if (playerChoice > 0 && playerChoice < 4)
+                player1Choice = choices[playerChoice - 1];
+            else
+                player2Choice = choices[playerChoice - 1];
+        }
 
         public string DetermineWinner()
         {
@@ -25,31 +36,41 @@ namespace Rock_Paper_Scissors_Code
 
             switch (DetermineOutcome())
             {
-                case 1: // Player 1 Wins
+                // Player 1 Wins
+                case 1:
                     player1Score++;
+                    winnerMessage = "Player 1 Wins! Rock Beats Scissors!";
                     break;
-                case 2: // Player 1 Wins
+                case 2:
                     player1Score++;
+                    winnerMessage = "Player 1 Wins! Paper Beats Rock!";
                     break;
-                case 3: // Player 1 Wins
+                case 3:
                     player1Score++;
+                    winnerMessage = "Player 1 Wins! Scissors Beats Paper!";
                     break;
-
-                case 4:  // Player 2 Wins
+                // Player 2 Wins
+                case 4:  
                     player2Score++;
+                    winnerMessage = "Player 2 Wins! Paper Beats Rock!";
                     break;
-                case 5: // Player 2 Wins
+                case 5:
                     player2Score++;
+                    winnerMessage = "Player 2 Wins! Scissors Beats Paper!";
                     break;
-                case 6: // Player 2 Wins
+                case 6:
                     player2Score++;
+                    winnerMessage = "Player 2 Wins! Rock Beats Scissors!";
                     break;
-
-                case 7:  // Draw
+                // Draw
+                case 7:
+                    winnerMessage = "Draw! Both Players Selected Rock!";
                     break;
-                case 8:  // Draw
+                case 8:
+                    winnerMessage = "Draw! Both Players Selected Paper!";
                     break;
-                case 9: // Draw
+                case 9:
+                    winnerMessage = "Draw! Both Players Selected Scissors!";
                     break;
             }
             return winnerMessage;

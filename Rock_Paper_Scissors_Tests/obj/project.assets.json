@@ -4663,6 +4663,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "C:\\GitHub\\2021\\RockPaperScissorsApplication\\Rock_Paper_Scissors_Code\\Rock_Paper_Scissors_Code.csproj": {
               "projectPath": "C:\\GitHub\\2021\\RockPaperScissorsApplication\\Rock_Paper_Scissors_Code\\Rock_Paper_Scissors_Code.csproj"
@@ -4678,6 +4679,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
@@ -4707,7 +4709,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

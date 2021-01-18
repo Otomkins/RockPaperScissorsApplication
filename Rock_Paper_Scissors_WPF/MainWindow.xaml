@@ -5,8 +5,163 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Rock_Paper_Scissors_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="800" Width="1400">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="262*"/>
+            <RowDefinition Height="471*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Border BorderThickness="1" BorderBrush="Black" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="234" Margin="0,15,0,0" VerticalAlignment="Top" Width="1400">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF3939" Offset="0.004"/>
+                    <GradientStop Color="#FFFFB286" Offset="1"/>
+                    <GradientStop Color="#FFE47B3F" Offset="0.489"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <!-- Title & Logo -->
+        <Border x:Name="Title_Border" BorderThickness="4,4,4,4" BorderBrush="Black" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="280" Margin="519,16,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="362" Background="White"/>
+        <Label x:Name="Title_Text_1" Content="ROCK" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="74" Margin="586,18,0,0" VerticalAlignment="Top" Width="228" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="72" FontFamily="Playbill"/>
+        <Label x:Name="Title_Text_2" Content="PAPER" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="87" Margin="586,77,0,0" VerticalAlignment="Top" Width="228" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="85" FontFamily="Playbill"/>
+        <Label x:Name="Title_Text_3" Content="SCISSORS" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="110" Margin="568,147,0,0" VerticalAlignment="Top" Width="264" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="100" FontFamily="Playbill"/>
+        <Label x:Name="Title_Text_4" Content="VS" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="67" Margin="586,233,0,0" VerticalAlignment="Top" Width="228" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" FontFamily="Pristina" Foreground="#FFD60000" FontWeight="Bold" FontStyle="Normal" Grid.RowSpan="2"/>
+
+
+        <!-- Player 1 Profile -->
+        <Border x:Name="Player_1_Profile_Border" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalAlignment="Left" Height="181" Margin="29,15,0,0" VerticalAlignment="Top" Width="180" IsEnabled="False" Background="White"/>
+        <Image x:Name="Player_1_Profile_Image" HorizontalAlignment="Left" Height="179" Margin="39,16,0,0" VerticalAlignment="Top" Width="160" Source="/Images/Player_1_Icon.png" Stretch="None" IsEnabled="False"/>
+        <Label x:Name="Player_1_Name_Label" Content="PLAYER 1" HorizontalAlignment="Left" Height="41" Margin="29,208,0,0" VerticalAlignment="Top" Width="180" VerticalContentAlignment="Top" FontSize="20" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" FontWeight="Bold" Background="White"/>
+        <Label x:Name="Player_1_Score_Label" Content="Score:" HorizontalAlignment="Left" Height="37" Margin="265,64,0,0" VerticalAlignment="Top" Width="65" VerticalContentAlignment="Center" FontSize="18" BorderThickness="2,2,2,2" BorderBrush="Black" FontWeight="Bold" Background="White"/>
+        <TextBox x:Name="Player_1_Score_TextBox" HorizontalAlignment="Left" Height="131" Margin="265,98,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" FontSize="72" BorderThickness="4,4,4,4" BorderBrush="Black"/>
+
+        <!-- Player 1 Selection -->
+        <!-- Rock -->
+        <Border x:Name="Player_1_Selection_Rock_Border" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalAlignment="Left" Height="100" Margin="32,33,0,0" VerticalAlignment="Top" Width="175" Grid.Row="1"/>
+        <Image x:Name="Player_1_Selection_Rock_Image" HorizontalAlignment="Left" Height="95" Margin="33,35,0,0" VerticalAlignment="Top" Width="173" Source="/Images/Player_1_Rock.png" Grid.Row="1"/>
+        <Button x:Name="Player_1_Selection_Rock_Button" Content="" HorizontalAlignment="Left" Height="100" Margin="32,33,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Visibility="Visible" Click="Player_1_Selection_Rock_Button_Click" Opacity="0.3" ClipToBounds="True">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Player_1_Selection_Rock_Label" Content="Rock" HorizontalAlignment="Left" Height="26" Margin="60,131,0,0" VerticalAlignment="Top" Width="118" VerticalContentAlignment="Top" FontSize="14" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Row="1" Padding="2,2,2,2"/>
+        <!-- Paper -->
+        <Border x:Name="Player_1_Selection_Paper_Border" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalAlignment="Left" Height="100" Margin="32,182,0,0" VerticalAlignment="Top" Width="175" Grid.Row="1"/>
+        <Image x:Name="Player_1_Selection_Paper_Image" HorizontalAlignment="Left" Height="95" Margin="33,185,0,0" VerticalAlignment="Top" Width="173" Source="/Images/Player_1_Paper.png" Grid.Row="1"/>
+        <Button x:Name="Player_1_Selection_Paper_Button" Content="" HorizontalAlignment="Left" Height="100" Margin="32,182,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Visibility="Visible" Click="Player_1_Selection_Paper_Button_Click" Opacity="0.3">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Player_1_Selection_Paper_Label" Content="Paper" HorizontalAlignment="Left" Height="26" Margin="55,280,0,0" VerticalAlignment="Top" Width="118" VerticalContentAlignment="Top" FontSize="14" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Row="1" Padding="2,2,2,2"/>
+        <!-- Scissors -->
+        <Border x:Name="Player_1_Selection_Scissors_Border" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalAlignment="Left" Height="100" Margin="32,330,0,0" VerticalAlignment="Top" Width="175" Grid.Row="1"/>
+        <Image x:Name="Player_1_Selection_Scissors_Image" HorizontalAlignment="Left" Height="95" Margin="33,333,0,0" VerticalAlignment="Top" Width="173" Source="/Images/Player_1_Scissors.png" Grid.Row="1"/>
+        <Button x:Name="Player_1_Selection_Scissors_Button" Content="" HorizontalAlignment="Left" Height="100" Margin="32,330,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Visibility="Visible" Click="Player_1_Selection_Scissors_Button_Click" Opacity="0.3">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Player_1_Selection_Scissors_Label" Content="Scissors" HorizontalAlignment="Left" Height="26" Margin="60,428,0,0" VerticalAlignment="Top" Width="118" VerticalContentAlignment="Top" FontSize="14" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Row="1" Padding="2,2,2,2"/>
+
+        <!-- Player 1 Choice -->
+        <Label x:Name="Player_1_Choice_Label" Content="Player 1 Chooses:" HorizontalAlignment="Left" Height="47" Margin="265,39,0,0" Grid.Row="1" VerticalAlignment="Top" Width="216" ClipToBounds="True" FontSize="24" FontWeight="Bold" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Border x:Name="Player_1_Choice_Border" BorderThickness="4,4,4,4" BorderBrush="Black" HorizontalAlignment="Left" Height="226" Margin="265,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="409"/>
+        <Image x:Name="Player_1_Choice_Image" HorizontalAlignment="Left" Height="226" Margin="265,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="407"/>
+
+
+        <!-- Player 2 Profile -->
+        <Border x:Name="Player_2_Profile_Border" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalAlignment="Left" Height="181" Margin="482,16,0,0" VerticalAlignment="Top" Width="180" Grid.Column="1" Background="White"/>
+        <Image x:Name="Player_2_Profile_Image" HorizontalAlignment="Left" Height="179" Margin="492,17,0,0" VerticalAlignment="Top" Width="160" Source="/Images/Player_2_Icon.png" Stretch="None" Grid.Column="1"/>
+        <Label x:Name="Player_2_Name_Label" Content="PLAYER 2" HorizontalAlignment="Left" Height="41" Margin="482,208,0,0" VerticalAlignment="Top" Width="179" VerticalContentAlignment="Top" FontSize="20" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Column="1" Background="White"/>
+        <Label x:Name="Player_2_Score_Label" Content="Score:" HorizontalAlignment="Left" Height="37" Margin="360,64,0,0" VerticalAlignment="Top" Width="66" VerticalContentAlignment="Center" FontSize="18" BorderThickness="2,2,2,2" BorderBrush="Black" Grid.Column="1" FontWeight="Bold" Background="White"/>
+        <TextBox x:Name="Player_2_Score_TextBox" HorizontalAlignment="Left" Height="131" Margin="278,98,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Width="148" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsReadOnly="True" FontSize="72" BorderThickness="4,4,4,4" BorderBrush="Black" Grid.Column="1"/>
+
+        <!-- Player 2 Selection -->
+        <!-- Rock -->
+        <Border x:Name="Player_2_Selection_Rock_Border" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalAlignment="Left" Height="100" Margin="485,33,0,0" VerticalAlignment="Top" Width="175" Grid.Row="1" Grid.Column="1"/>
+        <Image x:Name="Player_2_Selection_Rock_Image" HorizontalAlignment="Left" Height="95" Margin="497,35,0,0" VerticalAlignment="Top" Width="173" Source="/Images/Player_2_Rock.png" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="Player_2_Selection_Rock_Button" Content="" HorizontalAlignment="Left" Height="100" Margin="486,33,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Visibility="Visible" Grid.Column="1" Opacity="0.3">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Player_2_Selection_Rock_Label" Content="Rock" HorizontalAlignment="Left" Height="26" Margin="518,131,0,0" VerticalAlignment="Top" Width="118" VerticalContentAlignment="Top" FontSize="14" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Row="1" Padding="2,2,2,2" Grid.Column="1"/>
+        <!-- Paper -->
+        <Border x:Name="Player_2_Selection_Paper_Border" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalAlignment="Left" Height="100" Margin="485,182,0,0" VerticalAlignment="Top" Width="175" Grid.Row="1" Grid.Column="1"/>
+        <Image x:Name="Player_2_Selection_Paper_Image" HorizontalAlignment="Left" Height="95" Margin="498,184,0,0" VerticalAlignment="Top" Width="173" Source="/Images/Player_2_Paper.png" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="Player_2_Selection_Paper_Button" Content="" HorizontalAlignment="Left" Height="100" Margin="485,182,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Visibility="Visible" Grid.Column="1" Opacity="0.3">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Player_2_Selection_Paper_Label" Content="Paper" HorizontalAlignment="Left" Height="26" Margin="513,280,0,0" VerticalAlignment="Top" Width="118" VerticalContentAlignment="Top" FontSize="14" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Row="1" Padding="2,2,2,2" Grid.Column="1"/>
+        <!-- Scissors -->
+        <Border x:Name="Player_2_Selection_Scissors_Border" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalAlignment="Left" Height="100" Margin="485,328,0,0" VerticalAlignment="Top" Width="175" Grid.Row="1" Grid.Column="1"/>
+        <Image x:Name="Player_2_Selection_Scissors_Image" HorizontalAlignment="Left" Height="95" Margin="497,330,0,0" VerticalAlignment="Top" Width="173" Source="/Images/Player_2_Scissors.png" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="Player_2_Selection_Scissors_Button" Content="" HorizontalAlignment="Left" Height="100" Margin="485,328,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Visibility="Visible" Grid.Column="1" Opacity="0.3">
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Player_2_Selection_Scissors_Label" Content="Scissors" HorizontalAlignment="Left" Height="26" Margin="518,426,0,0" VerticalAlignment="Top" Width="118" VerticalContentAlignment="Top" FontSize="14" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" FontWeight="Bold" Grid.Row="1" Padding="2,2,2,2" Grid.Column="1"/>
+
+        <!-- Player 2 Choice -->
+        <Label x:Name="Player_2_Choice_Label" Content="Player 2 Chooses:" HorizontalAlignment="Left" Height="47" Margin="218,39,0,0" Grid.Row="1" VerticalAlignment="Top" Width="216" ClipToBounds="True" FontSize="24" FontWeight="Bold" BorderThickness="2,2,2,2" BorderBrush="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1"/>
+        <Border x:Name="Player_2_Choice_Border" BorderThickness="4,4,4,4" BorderBrush="Black" HorizontalAlignment="Left" Height="226" Margin="25,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="409" Grid.Column="1"/>
+        <Image x:Name="Player_2_Choice_Image" HorizontalAlignment="Left" Height="226" Margin="25,84,0,0" Grid.Row="1" VerticalAlignment="Top" Width="406" Grid.Column="1"/>
+
+
+
+        <TextBox x:Name="Round_Log_TextBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="58" Margin="265,334,0,0" Grid.Row="1" Text="Make Your Selection...." TextWrapping="Wrap" VerticalAlignment="Top" Width="870" FontSize="36" TextAlignment="Center" FontFamily="Calibri" FontWeight="Bold" BorderThickness="2,2,2,2" BorderBrush="Black" IsReadOnly="True" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" SelectionBrush="Black"/>
+
+        <Button x:Name="Game_Restart_Button"  Content="Restart" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="49" Margin="568,415,0,0" Grid.Row="1" VerticalAlignment="Top" Width="264" BorderThickness="2,2,2,2" FontWeight="Normal" FontSize="24"/>
+
+
+
+
 
     </Grid>
 </Window>

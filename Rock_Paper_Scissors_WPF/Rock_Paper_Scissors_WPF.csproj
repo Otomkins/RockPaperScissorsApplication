@@ -6,4 +6,30 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Player_1_Icon.png" />
+    <None Remove="Player_1_Paper.png" />
+    <None Remove="Player_1_Rock.png" />
+    <None Remove="Player_1_Scissors.png" />
+    <None Remove="Player_2_Icon.png" />
+    <None Remove="Player_2_Paper.png" />
+    <None Remove="Player_2_Rock.png" />
+    <None Remove="Player_2_Scissors.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rock_Paper_Scissors_Code\Rock_Paper_Scissors_Code.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Player_1_Icon.png" />
+    <Resource Include="Images\Player_1_Paper.png" />
+    <Resource Include="Images\Player_1_Rock.png" />
+    <Resource Include="Images\Player_1_Scissors.png" />
+    <Resource Include="Images\Player_2_Icon.png" />
+    <Resource Include="Images\Player_2_Paper.png" />
+    <Resource Include="Images\Player_2_Rock.png" />
+    <Resource Include="Images\Player_2_Scissors.png" />
+  </ItemGroup>
+
 </Project>
