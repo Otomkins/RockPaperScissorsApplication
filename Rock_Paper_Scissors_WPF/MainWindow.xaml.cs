@@ -27,6 +27,8 @@ namespace Rock_Paper_Scissors_WPF
         BitmapImage _player1PaperImage = new BitmapImage(new Uri("/Images/Player_1_Paper.png", UriKind.Relative));
         BitmapImage _player1ScissorsImage = new BitmapImage(new Uri("/Images/Player_1_Scissors.png", UriKind.Relative));
 
+        int _roundCount = 1;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -58,6 +60,12 @@ namespace Rock_Paper_Scissors_WPF
             Player_1_Score_TextBox.Text = _rpsc.RetrievePlayer1Score().ToString();
             Player_2_Score_TextBox.Text = _rpsc.RetrievePlayer2Score().ToString();
             SetPlayer2Choice();
+
+            Player_1_Selection_Rock_Button.IsEnabled = false;
+            Player_1_Selection_Paper_Button.IsEnabled = false;
+            Player_1_Selection_Scissors_Button.IsEnabled = false;
+            Next_Round_Button.IsEnabled = true;
+            Next_Round_Button.Opacity = 100;
         }
 
         private void SetPlayer2Choice()
@@ -76,9 +84,34 @@ namespace Rock_Paper_Scissors_WPF
             }
         }
 
+        private void Next_Round_Button_Click(object sender, RoutedEventArgs e)
+        {
+            NewRoundUnrestrict();
+            Round_Count_Label.Content = $"Round {++_roundCount}";
+        }
+
         private void Game_Restart_Button_Click(object sender, RoutedEventArgs e)
         {
+            NewRoundUnrestrict();
+            _rpsc.RestartGame();
 
+            Player_1_Score_TextBox.Text = _rpsc.RetrievePlayer1Score().ToString();
+            Player_2_Score_TextBox.Text = _rpsc.RetrievePlayer2Score().ToString();
+            _roundCount = 1;
+            Round_Count_Label.Content = $"Round 1";
+        }
+
+        private void NewRoundUnrestrict()
+        {
+            Player_1_Selection_Rock_Button.IsEnabled = true;
+            Player_1_Selection_Paper_Button.IsEnabled = true;
+            Player_1_Selection_Scissors_Button.IsEnabled = true;
+
+            Player_1_Choice_Image.Source = null;
+            Player_2_Choice_Image.Source = null;
+            Round_Log_TextBox.Text = "Make Your Selection....";
+            Next_Round_Button.IsEnabled = false;
+            Next_Round_Button.Opacity = 0;
         }
     }
 }

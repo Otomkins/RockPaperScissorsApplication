@@ -22,6 +22,14 @@ namespace Rock_Paper_Scissors_Code
             "Scissors"
         };
 
+        public void RestartGame()
+        {
+            _player1Score = 0;
+            _player2Score = 0;
+            _player1Choice = "";
+            _player2Choice = "";
+        }
+
         public int RetrievePlayer1Score() => _player1Score;
         public int RetrievePlayer2Score() => _player2Score;
         public string RetrievePlayer1Choice() => _player1Choice;

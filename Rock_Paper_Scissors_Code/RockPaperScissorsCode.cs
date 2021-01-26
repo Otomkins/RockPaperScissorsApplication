@@ -20,7 +20,7 @@ namespace Rock_Paper_Scissors_Code
 
         public string RetrieveOutcome() =>  _rpss.DetermineWinner();
 
-
+        public void RestartGame() => _rpss.RestartGame();
 
 
 
